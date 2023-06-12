@@ -73,7 +73,7 @@ export default function Home() {
                   className="img2"
                   alt=""
                   width="500"
-                  height="200"
+                  height="500"
                 />
               </div>
             </div>
