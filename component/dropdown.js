@@ -10,7 +10,6 @@ const UserMenu = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('token');
-
         router.push('/login');
     };
 
@@ -62,9 +61,7 @@ const UserMenu = () => {
                         </Link>
                     </Dropdown.Item>
                     <Dropdown.Item key="Logout">
-                        <Link className="color-black" href="#">
-                            <div className='full-width' onClick={handleLogout}>Logout</div>
-                        </Link>
+                        <div className='full-width' onClick={handleLogout}>Logout</div>
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
