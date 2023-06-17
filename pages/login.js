@@ -41,7 +41,7 @@ export default function Login() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://kranti-education.onrender.com/login`,
+        `https://drab-lime-blackbuck-sock.cyclic.app/login`,
         {
           method: "POST",
           headers: {
