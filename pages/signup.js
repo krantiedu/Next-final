@@ -41,7 +41,7 @@ export default function Signup() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://kranti-education.onrender.com/register`,
+        `https://drab-lime-blackbuck-sock.cyclic.app/register`,
         {
           method: "POST",
           headers: {
