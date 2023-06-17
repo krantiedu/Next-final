@@ -10,7 +10,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.post(`https://kranti-education.onrender.com/showprofile`, { token });
+        const response = await axios.post(`https://drab-lime-blackbuck-sock.cyclic.app/showprofile`, { token });
         console.log(response)
         setProfile(response.data);
       } catch (error) {
