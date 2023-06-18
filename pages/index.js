@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
@@ -5,10 +6,24 @@ const kidsImg = "https://img.freepik.com/premium-photo/kids-science-concept-cute
 // import styles from '@/styles/Home.module.css'
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+  const [isLoggedin, setIsLoggedin] = useState(false)
+
+
+  useEffect(() => {
+    const token =  localStorage.getItem('token'); 
+    if(!!token) {
+      return setIsLoggedin(true)
+    }else{
+      setIsLoggedin(false)
+    }
+  }, []);
+
   return (
     <>
       <section className="home">
@@ -19,10 +34,13 @@ export default function Home() {
           <h1>Leading Tomorrow</h1>
           <p>On the way of making school and classes smart.</p>
           {/* <!-- <button>start</button> --> */}
+          <Link href={isLoggedin ? "/dashboard" : "/login"}>
           <button className="bottom">
             get started
             <span className="bg"></span>
           </button>
+          </Link>
+          
         </div>
       </section>
       <main className={`${inter.className}`}>
