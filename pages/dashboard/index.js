@@ -16,7 +16,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await axios.post(`https://kranti-education.onrender.com/sendproduct`);
+                const response = await axios.post(`https://kranti-back.onrender.com/sendproduct`);
                 setProducts(response.data);
             } catch (error) {
                 console.error(error); 

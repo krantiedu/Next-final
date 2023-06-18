@@ -16,7 +16,7 @@ const UserMenu = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.post(`https://drab-lime-blackbuck-sock.cyclic.app/showprofile`, { token });
+                const response = await axios.post(`https://kranti-back.onrender.com/showprofile`, { token });
                 console.log(response)
                 setProfile(response.data);
             } catch (error) {
