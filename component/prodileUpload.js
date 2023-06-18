@@ -27,7 +27,7 @@ const UploadForm = ({open, onClose}) => {
       formData.append('token', token);
 
 
-      await axios.post(`https://drab-lime-blackbuck-sock.cyclic.app/upload`, formData);
+      await axios.post(`https://kranti-back.onrender.com/upload`, formData);
 
 
       // Handle success

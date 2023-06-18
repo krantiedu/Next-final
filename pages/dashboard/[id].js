@@ -42,7 +42,7 @@ export default function Home() {
     const fetchProfile = async () => {
       try {
         const response = await axios.post(
-          `https://drab-lime-blackbuck-sock.cyclic.app/sendmodule`,
+          `https://kranti-back.onrender.com/sendmodule`,
           { productid: id }
         );
 
