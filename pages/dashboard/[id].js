@@ -14,6 +14,8 @@ import Image from "next/image";
 import Link from "next/link";
 import axios from "axios";
 import { useRouter } from "next/router";
+import React from "react";
+import ReactPlayer from "react-player/youtube";
 
 //this are course details pass this as props from previous page
 
@@ -221,7 +223,12 @@ export default function Home() {
             //MaKe neceesary change accordingly or if you want to add more details about course
             <div className={styles.course_detail_wrap}>
               <h1>Course: {course.subject}</h1>
-              <Image width={500} height={400} src={course.url} alt={course.subject + " image"} />
+              <Image
+                width={500}
+                height={400}
+                src={course.url}
+                alt={course.subject + " image"}
+              />
               <p>{course.desctiption}</p>
             </div>
           ) : (
@@ -251,19 +258,15 @@ export default function Home() {
               {/* Active module topic*/}
               <h3>{activeModule.topic}</h3>
               {/* Active module video , thubnail of video will be Module Image*/}
-              <video width={"100%"} poster={activeModule.image} controls>
-                {/* Set source of video to active module link */}
-                <source
-                  src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-                  // src={activeModule.link}
-                  type="video/mp4"
+              <div className="video-player_wrap">
+                <ReactPlayer
+                  width="100%"
+                  controls={true}
+                  url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
                 />
-                <p>
-                  Your browser doesn&apos;t support HTML video. Here is a
-                  <a href="myVideo.mp4">link to the video</a> instead.
-                </p>
-              </video>
+              </div>
               {/*active module description */}
+
               <p>{activeModule.description}</p>
             </div>
           )}
