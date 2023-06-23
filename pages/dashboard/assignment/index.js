@@ -7,7 +7,7 @@ import useAuth from "../../useAuth";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const assignment = () => {
+const Assignment = () => {
   useAuth();
 
   const [products, setProducts] = useState([]);
@@ -59,4 +59,4 @@ const assignment = () => {
   );
 };
 
-export default assignment;
+export default Assignment;
