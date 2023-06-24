@@ -7,11 +7,11 @@ const kidsImg = "https://img.freepik.com/premium-photo/kids-science-concept-cute
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
 
+
+export default function Home() {
   const [isLoggedin, setIsLoggedin] = useState(false)
 
 

@@ -31,7 +31,7 @@ const DashboardLayout = ({ children }) => {
         },
         {
             name: "Assignments",
-            icon: <i className="fa-solid fa-gauge" ></i>,
+            icon: <i className="fa-solid fa-book" ></i>,
             href: "/dashboard/assignment",
         },
         {

@@ -3,7 +3,7 @@ const Settings = () => {
     console.log("seeting")
     return (
         <div >
-           settings page
+           course settings
         </div>
     );
 }
