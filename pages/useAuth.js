@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect } from 'react';
 import { useRouter as useRouterClient } from 'next/router';
 
