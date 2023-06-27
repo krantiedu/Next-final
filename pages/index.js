@@ -8,17 +8,18 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Pop_Courses from "@/component/top_courses";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isLoggedin, setIsLoggedin] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
+    const token = localStorage.getItem('token');
     if (!!token) {
-      return setIsLoggedin(true);
+      return setIsLoggedin(true)
     } else {
-      setIsLoggedin(false);
+      setIsLoggedin(false)
     }
   }, []);
 
@@ -30,17 +31,19 @@ export default function Home() {
           <p className="main_content_eyeCatcher"><span>START</span>LEARNING FROM TODAY</p>
           <h1>The Best Way For Your Learning</h1>
           <div className="main_content_descript">
-          <p>
-            Welcome to KRANTI - a distinctive and supportive enviornment that to provide best path for learning, which is easy and enojoyable to
-            follow.
-          </p>
+            <p>
+              Welcome to KRANTI - a distinctive and supportive enviornment that to provide best path for learning, which is easy and enojoyable to
+              follow.
+            </p>
           </div>
           <div className="main_content_btn_wrap">
-            <Link href={isLoggedin ? `/dashboard` : `/login`}><div className="get_started_button"><FontAwesomeIcon icon={faArrowRight}/>Get Started</div></Link>
-            <div className="demo_button"><FontAwesomeIcon icon={faCirclePlay}/>Watch Demo</div>
+            <Link href={isLoggedin ? `/dashboard` : `/login`}><div className="get_started_button"><FontAwesomeIcon icon={faArrowRight} />Get Started</div></Link>
+            <div className="demo_button"><FontAwesomeIcon icon={faCirclePlay} />Watch Demo</div>
           </div>
         </div>
       </div>
+      {/* Top Courses Section */}
+      <Pop_Courses />
 
       {/*Review Section */}
       <div className="review_section">

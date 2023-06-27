@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const Dashboard = () => {
-  // useAuth();
+  useAuth();
 
   const [products, setProducts] = useState([]);
   const [activeClass, setActiveClass] = useState();

@@ -9,7 +9,9 @@
 
 body {
   /* background: #1c8ef9 !important; */
-  background: #f4f8fe;
+  /* background: #f4f8fe; */
+  background: #622bbb3b;
+
   min-height: 100vh;
   width: auto;
   font-weight: 400;
