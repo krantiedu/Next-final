@@ -48,7 +48,7 @@ const Footer = () => {
                         <strong> Kranti</strong>. All Rights Reserved
                     </div>
                     <div className={styles.Credits}>
-                        Designed by Nikhil Prajapat
+                        Designed by Web devloper Team
                     </div>
                 </div>
                 <div className={styles.link}>

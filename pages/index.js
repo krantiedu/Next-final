@@ -7,6 +7,7 @@ const kidsImg = "https://img.freepik.com/premium-photo/kids-science-concept-cute
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Pop_Courses from "@/component/pop_courses";
 const inter = Inter({ subsets: ["latin"] });
 
 
@@ -16,10 +17,10 @@ export default function Home() {
 
 
   useEffect(() => {
-    const token =  localStorage.getItem('token'); 
-    if(!!token) {
+    const token = localStorage.getItem('token');
+    if (!!token) {
       return setIsLoggedin(true)
-    }else{
+    } else {
       setIsLoggedin(false)
     }
   }, []);
@@ -35,12 +36,12 @@ export default function Home() {
           <p>On the way of making school and classes smart.</p>
           {/* <!-- <button>start</button> --> */}
           <Link href={isLoggedin ? "/dashboard" : "/login"}>
-          <button className="bottom">
-            get started
-            <span className="bg"></span>
-          </button>
+            <button className="bottom">
+              get started
+              <span className="bg"></span>
+            </button>
           </Link>
-          
+
         </div>
       </section>
       <main className={`${inter.className}`}>
@@ -96,6 +97,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <Pop_Courses />
         </section>
         <div className="why_us">
           <div className="whyus_container">
