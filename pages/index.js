@@ -6,39 +6,44 @@ const kidsImg =
 // import styles from '@/styles/Home.module.css'
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlay, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import Pop_Courses from "@/component/top_courses";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [isLoggedin, setIsLoggedin] = useState(false);
 
   useEffect(() => {
-    const token =  localStorage.getItem('token'); 
-    if(!!token) {
+    const token = localStorage.getItem('token');
+    if (!!token) {
       return setIsLoggedin(true)
-    }else{
+    } else {
       setIsLoggedin(false)
     }
   }, []);
 
   return (
-    <>
-      <section className="home">
-        <div className="overlay"></div>
-        <div id="hero"></div>
-        <div className="container2" data-aos="fade-up">
-          <h1>Learning Today,</h1>
-          <h1>Leading Tomorrow</h1>
-          <p>On the way of making school and classes smart.</p>
-          {/* <!-- <button>start</button> --> */}
-          <Link href={isLoggedin ? "/dashboard" : "/login"}>
-          <button className="bottom">
-            get started
-            <span className="bg"></span>
-          </button>
-          </Link>
-          
+    <div className="home_wrap">
+      {/*Main Section */}
+      <div className="main_section">
+        <div className="main_content_wrap">
+          <p className="main_content_eyeCatcher"><span>START</span>LEARNING FROM TODAY</p>
+          <h1>The Best Way For Your Learning</h1>
+          <div className="main_content_descript">
+            <p>
+              Welcome to KRANTI - a distinctive and supportive enviornment that to provide best path for learning, which is easy and enojoyable to
+              follow.
+            </p>
+          </div>
+          <div className="main_content_btn_wrap">
+            <Link href={isLoggedin ? `/dashboard` : `/login`}><div className="get_started_button"><FontAwesomeIcon icon={faArrowRight} />Get Started</div></Link>
+            <div className="demo_button"><FontAwesomeIcon icon={faCirclePlay} />Watch Demo</div>
+          </div>
         </div>
       </div>
+      {/* Top Courses Section */}
+      <Pop_Courses />
 
       {/*Review Section */}
       <div className="review_section">
@@ -77,23 +82,21 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
-        <div className="why_us">
-          <div className="whyus_container">
-            <h3>Why Choose Kranti?</h3>
-            <p>
-              Kranti is a pioneering organization in the education sector that
-              is dedicated to making classrooms smarter and more accessible.
-              They believe in the transformative power of technology and are
-              committed to providing equal educational opportunities to all
-              students. {"Kranti's"} comprehensive training and support helps
-              educational institutions create engaging and inclusive learning
-              environments.
-            </p>
-            <div className="text-center">
-              <Link href="/about" className="more-btn">
-                Learn More <i className="fa-solid fa-chevron-right"></i>
-              </Link>
+          <div className="review_card">
+            <div className="review_card_img_wrap">
+              <Image
+                src={`https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60`}
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="review_card_rev_wrap">
+              <p className="review_card_rev">There are many variations of passages of Lorem Ipsum available</p>
+              <div className="card_footer">
+                <p>78 student</p>
+                <p>⭐⭐⭐⭐⭐</p>
+              </div>
             </div>
           </div>
         </div>
