@@ -169,6 +169,7 @@ export default function Home() {
 
   //when course details are open moudle details will be closed
   const courseClickHandler = () => {
+    if(quizMode) return;
     setCourseContent(true);
     setActiveModuleId(-1);
     setMobileDrawerOpen(false);
@@ -176,14 +177,14 @@ export default function Home() {
 
   //handle previous and next buttons on modlues pages
   const prevClickHandler = () => {
-    if (activeModuleId === 0) return;
+    if (activeModuleId === 0 || quizMode) return;
     const prevId = activeModuleId - 1;
     setActiveModule(modules[prevId]);
     setActiveModuleId(prevId);
   };
 
   const nextClickHandler = () => {
-    if (activeModuleId === modules.length - 1) return;
+    if (activeModuleId === modules.length - 1 || quizMode) return;
     const nextId = activeModuleId + 1;
     setActiveModule(modules[nextId]);
     setActiveModuleId(nextId);
@@ -248,6 +249,7 @@ export default function Home() {
                   key={item._id}
                   id={index}
                   onClick={() => {
+                    if(quizMode)return;
                     //on clicking it will turn of course details
                     setCourseContent(false);
                     setQuizMode(false);
@@ -306,6 +308,7 @@ export default function Home() {
                 key={item._id}
                 id={index}
                 onClick={() => {
+                  if(quizMode)return;
                   //on clicking it will turn of course details
                   setCourseContent(false);
                   setQuizMode(false);

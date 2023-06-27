@@ -1,26 +1,21 @@
-
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-const kidsImg = "https://img.freepik.com/premium-photo/kids-science-concept-cute-indian-little-kid-student-scientist-studying-science-experimenting-with-microscope-chemicals-with-diagrams-doodles-drawn-green-chalkboard_466689-17299.jpg";
+const kidsImg =
+  "https://img.freepik.com/premium-photo/kids-science-concept-cute-indian-little-kid-student-scientist-studying-science-experimenting-with-microscope-chemicals-with-diagrams-doodles-drawn-green-chalkboard_466689-17299.jpg";
 // import styles from '@/styles/Home.module.css'
-
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Pop_Courses from "@/component/pop_courses";
 const inter = Inter({ subsets: ["latin"] });
 
-
-
 export default function Home() {
-  const [isLoggedin, setIsLoggedin] = useState(false)
-
+  const [isLoggedin, setIsLoggedin] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (!!token) {
+    const token =  localStorage.getItem('token'); 
+    if(!!token) {
       return setIsLoggedin(true)
-    } else {
+    }else{
       setIsLoggedin(false)
     }
   }, []);
@@ -36,68 +31,52 @@ export default function Home() {
           <p>On the way of making school and classes smart.</p>
           {/* <!-- <button>start</button> --> */}
           <Link href={isLoggedin ? "/dashboard" : "/login"}>
-            <button className="bottom">
-              get started
-              <span className="bg"></span>
-            </button>
+          <button className="bottom">
+            get started
+            <span className="bg"></span>
+          </button>
           </Link>
-
+          
         </div>
-      </section>
-      <main className={`${inter.className}`}>
-        <section className="about">
-          <div className="container_about">
-            <div className="row">
-              <div className="content_home">
-                <h3>
-                  Kranti is an innovative organization that is dedicated to
-                  transforming education through:
-                </h3>
-                <ul>
-                  <li>
-                    <i
-                      className="fa-regular fa-circle-check"
-                      style={{ color: "#9141ac" }}
-                    ></i>{" "}
-                    <b>Smart classrooms:</b> Kranti introduces cutting-edge
-                    technological solutions in classrooms, including interactive
-                    whiteboards, projectors, and smart devices, to create
-                    engaging and interactive learning environments.
-                  </li>
-                  <li>
-                    <i
-                      className="fa-regular fa-circle-check"
-                      style={{ color: "#9141ac" }}
-                    ></i>{" "}
-                    <b>Inclusive learning:</b> Kranti is committed to providing
-                    equal educational opportunities to all students, including
-                    those with special needs, through an inclusive learning
-                    environment.
-                  </li>
-                  <li>
-                    <i
-                      className="fa-regular fa-circle-check"
-                      style={{ color: "#9141ac" }}
-                    ></i>{" "}
-                    <b>Comprehensive training and support:</b> Kranti provides
-                    latest technological tools and equipment, and assists
-                    educational institutions in planning and implementing
-                    technological infrastructure.
-                  </li>
-                </ul>
-              </div>
-              <div className="mg2_container">
-                <Image
-                  src={kidsImg}
-                  className="img2"
-                  alt=""
-                  width="500"
-                  height="500"
-                />
+      </div>
+
+      {/*Review Section */}
+      <div className="review_section">
+        <div className="review_card_wrap">
+          <div className="review_card">
+            <div className="review_card_img_wrap">
+              <Image
+                src={`https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60`}
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="review_card_rev_wrap">
+              <p className="review_card_rev">There are many variations of passages of Lorem Ipsum available</p>
+              <div className="card_footer">
+                <p>78 student</p>
+                <p>⭐⭐⭐⭐⭐</p>
               </div>
             </div>
           </div>
-          <Pop_Courses />
+          <div className="review_card">
+            <div className="review_card_img_wrap">
+              <Image
+                src={`https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60`}
+                alt=""
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className="review_card_rev_wrap">
+              <p className="review_card_rev">There are many variations of passages of Lorem Ipsum available</p>
+              <div className="card_footer">
+                <p>78 student</p>
+                <p>⭐⭐⭐⭐⭐</p>
+              </div>
+            </div>
+          </div>
         </section>
         <div className="why_us">
           <div className="whyus_container">
@@ -118,7 +97,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </main>
-    </>
+      </div>
+    </div>
   );
 }

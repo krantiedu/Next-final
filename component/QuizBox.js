@@ -9,13 +9,7 @@ const QuizBox = (props) => {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [currentScore, setCurrentScore] = useState(0);
   const [timer, setTimer] = useState(10);
-
-  const quizSubmitHandler = () => {
-    console.log(currentScore);
-    setActiveQuestionId(0);
-    setSelectedAnswer("");
-    props.closer();
-  };
+  const [scoreCard, setScoreCard] = useState(false);
 
   useEffect(() => {
     const countdown = setInterval(() => {
@@ -24,30 +18,23 @@ const QuizBox = (props) => {
     return () => clearInterval(countdown);
   }, []);
 
-  const handleSubmit = () => {
-    if (selectedAnswer === activeQuestion.answer) {
-      console.log("correct Answer");
-      setCurrentScore(prevScore => prevScore + 1);
-      setCurrentScore(prevScore => prevScore + 0);
-      console.log("Your current score is --> ", currentScore);
-    } else {
-      console.log("wrong ansewer");
-    }
-    if (activeQuestionId === questionArray.length) {
-      console.log("Your total score is --> ", currentScore);
-      props.closer();
-    } else {
+  useEffect(() => {
+    if (timer === 0) {
+      if (selectedAnswer === activeQuestion.answer) {
+        console.log("correct Answer");
+        setCurrentScore(currentScore + 1);
+        console.log("current score -> ", currentScore);
+      }
+      if (activeQuestionId === questionArray.length) {
+        setScoreCard(true);
+        return;
+      }
       const temp = activeQuestionId + 1;
       setActiveQuestionId(temp);
       setActiveQuestion(questionArray[activeQuestionId]);
       setSelectedAnswer("");
       setTimer(10);
-    }
-  };
-
-  useEffect(() => {
-    if (timer === 0) {
-      handleSubmit();
+      console.log("current score -> ", currentScore);
     }
   }, [timer]);
 
@@ -57,6 +44,16 @@ const QuizBox = (props) => {
 
   return (
     <div className={styles.quiz_wrap}>
+      {scoreCard && (
+        <div className={styles.score_card_wrap}>
+          <div className={styles.score_card}>
+            <p>
+              {`Your Score is ${currentScore}/${totalQues}`}
+            </p>
+            <div onClick={() => props.closer()}>Exit</div>
+          </div>
+        </div>
+      )}
       <div className={styles.quiz_wrap_navbar}>
         <div
           className={styles.quiz_timer}
@@ -69,7 +66,9 @@ const QuizBox = (props) => {
         {activeQuestion.question}
       </p>
       <label
-        className={(selectedAnswer === activeQuestion.op_one) ? styles.active_label : ""}
+        className={
+          selectedAnswer === activeQuestion.op_one ? styles.active_label : ""
+        }
       >
         <input
           hidden
@@ -83,7 +82,7 @@ const QuizBox = (props) => {
       </label>
       <label
         className={
-          (selectedAnswer === activeQuestion.op_two) ? styles.active_label : ""
+          selectedAnswer === activeQuestion.op_two ? styles.active_label : ""
         }
       >
         <input
@@ -98,7 +97,7 @@ const QuizBox = (props) => {
       </label>
       <label
         className={
-          (selectedAnswer === activeQuestion.op_three) ? styles.active_label : ""
+          selectedAnswer === activeQuestion.op_three ? styles.active_label : ""
         }
       >
         <input
@@ -113,7 +112,7 @@ const QuizBox = (props) => {
       </label>
       <label
         className={
-          (selectedAnswer === activeQuestion.op_forth) ? styles.active_label : ""
+          selectedAnswer === activeQuestion.op_forth ? styles.active_label : ""
         }
       >
         <input
@@ -128,10 +127,15 @@ const QuizBox = (props) => {
       </label>
       <hr />
       <div className={styles.quiz_footer}>
-        <div className={styles.next_ques_button} onClick={quizSubmitHandler}>
+        <div className={styles.next_ques_button} onClick={() => setScoreCard(true)}>
           Submit
         </div>
-        <div className={styles.next_ques_button} onClick={handleSubmit}>
+        <div
+          className={styles.next_ques_button}
+          onClick={() => {
+            setTimer(0);
+          }}
+        >
           Next Ques.
         </div>
       </div>

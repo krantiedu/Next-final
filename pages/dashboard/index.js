@@ -44,6 +44,24 @@ const Dashboard = () => {
         console.log(temp);
         setActiveCourses(temp);
       }
+      /*
+      if (activeClass === "0" && activeLanguage === "0"){
+        setActiveCourses(products);
+        console.log(activeCourses);
+      }else if(activeClass !== "0" && activeLanguage === "0"){
+        const temp = products.filter((obj) => obj.class === activeClass);
+        console.log(temp);
+        setActiveCourses(temp);
+      }else if(activeClass === "0" && activeLanguage !== "0"){
+        const temp = products.filter((obj) => obj.language === activeLanguage);
+        console.log(temp);
+        setActiveCourses(temp);
+      }else if(activeClass !== "0" && activeLanguage !== "0"){
+        const temp = products.filter((obj) => (obj.class === activeClass && obj.language === activeLanguage));
+        console.log(temp);
+        setActiveCourses(temp);
+      }
+      */
     };
     courseSelctor();
   }, [activeClass]);
