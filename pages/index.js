@@ -32,8 +32,7 @@ export default function Home() {
           <h1>The Best Way For Your Learning</h1>
           <div className="main_content_descript">
             <p>
-              Welcome to KRANTI - a distinctive and supportive enviornment that to provide best path for learning, which is easy and enojoyable to
-              follow.
+            Welcome to KRANTI - an exceptional and empowering realm that paves the way for unparalleled learning, seamlessly blending ease and delight.
             </p>
           </div>
           <div className="main_content_btn_wrap">
@@ -42,8 +41,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Top Courses Section */}
-      <Pop_Courses />
+      
 
       {/*Review Section */}
       <div className="review_section">
@@ -101,6 +99,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Top Courses Section */}
+      <Pop_Courses />
     </div>
   );
 }
