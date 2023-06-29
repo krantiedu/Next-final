@@ -129,7 +129,7 @@
     margin-top: 10px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767px) {
     .dashboard_container {
         width: 100vw;
         height: 94vh;
@@ -137,6 +137,7 @@
 
     .courses_header{
         display: flex;
+        flex-direction: column;
         padding: 10px 0 10px 0;
     }
 
@@ -146,17 +147,18 @@
     }
 
     .course_seletor_wrap{
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .course_seletor_wrap label{
-        margin: 0 auto 5px auto;
-        font-size: .8rem;
+        margin: auto 5px auto 0;
+        font-size: .7rem;
         opacity: .7;
     }
     .course_seletor_wrap select{
         border-radius: .7rem;
-        padding: 2px 8px;
+        padding: 0;
+        margin-right: 5px;
     }
     
     .course_seletor_wrap select:hover{
