@@ -1,0 +1,47 @@
+
+.wrapper{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: #622bbb3b;
+}
+
+.container{
+    width: 80%;
+    /* height: 40vh; */
+    margin-top: 20px;
+    padding: 40px;
+    background: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)),url(/back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.header{
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(255, 245, 189);
+    color: rgb(218, 185, 1);
+}
+
+.achivements{
+   display: grid;
+   place-items: center;
+   width: 80%;
+   height: 80px;
+   grid-template-columns: 1fr 1fr 1fr;
+   color: aliceblue;
+}
+
+.num{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
