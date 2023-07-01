@@ -1,17 +1,16 @@
-
-.wrapper{
+.wrapper {
     width: 100%;
     display: grid;
     place-items: center;
     background: #622bbb3b;
 }
 
-.container{
+.container {
     width: 80%;
     /* height: 40vh; */
-    margin-top: 20px;
+    margin-top: 5vh;
     padding: 40px;
-    background: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4,9,30,0.7)),url(/back.png);
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/back.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -23,7 +22,7 @@
 
 }
 
-.header{
+.header {
     font-size: 30px;
     padding: 10px;
     margin-bottom: 20px;
@@ -31,17 +30,55 @@
     color: rgb(218, 185, 1);
 }
 
-.achivements{
-   display: grid;
-   place-items: center;
-   width: 80%;
-   height: 80px;
-   grid-template-columns: 1fr 1fr 1fr;
-   color: aliceblue;
+.achivements {
+    display: grid;
+    place-items: center;
+    width: 80%;
+    height: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: aliceblue;
 }
 
-.num{
+.num {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+/*
+* school section
+*/ 
+
+.school_sec {
+    width: 70%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header2{
+    font-size: 30px;
+    font-weight: 600;
+    color: #292b5f;
+    border-bottom: 1px solid rgb(32, 41, 114);
+
+}
+
+
+.school_partners {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px;
+}
+
