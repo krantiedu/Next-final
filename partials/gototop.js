@@ -1,4 +1,6 @@
 import styles from '@/styles/footer.module.css';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 
 const GoToTop = () => {
@@ -27,7 +29,7 @@ const GoToTop = () => {
         <>
             {isVisible && (
                 <div className={styles.topbtn} onClick={gotobtn}>
-                    <i className={`fa-solid fa-arrow-up ${styles.icon}`}></i>
+                    <FontAwesomeIcon icon={faArrowUp}/>
                 </div>
             )}
         </>

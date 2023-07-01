@@ -11,6 +11,7 @@ import { faCirclePlay, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Pop_Courses from "@/component/top_courses";
 import Achivement from "@/component/achivement_sec";
 import School from "@/component/school_partner";
+import GoToTop from "@/partials/gototop";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -34,8 +35,7 @@ export default function Home() {
           <h1>The Best Way For Your Learning</h1>
           <div className="main_content_descript">
             <p>
-              Welcome to KRANTI - a distinctive and supportive enviornment that to provide best path for learning, which is easy and enojoyable to
-              follow.
+            Welcome to KRANTI - an exceptional and empowering realm that paves the way for unparalleled learning, seamlessly blending ease and delight.
             </p>
           </div>
           <div className="main_content_btn_wrap">
@@ -44,8 +44,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Top Courses Section */}
-      <Pop_Courses />
+      
 
       {/*Review Section */}
       <div className="review_section">
@@ -103,6 +102,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Pop_Courses />
       <Achivement />
       <School />
     </div>

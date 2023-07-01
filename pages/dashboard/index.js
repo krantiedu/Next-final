@@ -11,6 +11,7 @@ const Dashboard = () => {
 
   const [products, setProducts] = useState([]);
   const [activeClass, setActiveClass] = useState();
+  const [activeLanguage,setActiveLanguage] = useState();
   const [activeCourses, setActiveCourses] = useState([]);
 
   useEffect(() => {
@@ -33,18 +34,13 @@ const Dashboard = () => {
     const selectedClass = event.target.value;
     setActiveClass(selectedClass);
   };
+  const handleSelectChangeLang = (event) => {
+    const selectedLang = event.target.value;
+    setActiveLanguage(selectedLang);
+  };
 
   useEffect(() => {
     const courseSelctor = () => {
-      if (activeClass === "0") {
-        setActiveCourses(products);
-        console.log(activeCourses);
-      } else {
-        const temp = products.filter((obj) => obj.class === activeClass);
-        console.log(temp);
-        setActiveCourses(temp);
-      }
-      /*
       if (activeClass === "0" && activeLanguage === "0"){
         setActiveCourses(products);
         console.log(activeCourses);
@@ -61,10 +57,10 @@ const Dashboard = () => {
         console.log(temp);
         setActiveCourses(temp);
       }
-      */
+      
     };
     courseSelctor();
-  }, [activeClass]);
+  }, [activeClass,activeLanguage]);
 
   return (
     <div className={styles.dashboard_container}>
@@ -72,7 +68,7 @@ const Dashboard = () => {
         <div className={styles.courses_header}>
           <h2>My Courses</h2>
           <div className={styles.course_seletor_wrap}>
-            <label htmlFor="classSelect">{"Select class :"}</label>
+            <label htmlFor="classSelect">{"Class :"}</label>
             <select
               id="classSelect"
               value={activeClass}
@@ -85,6 +81,16 @@ const Dashboard = () => {
               <option value="4">Class 4</option>
               <option value="5">Class 5</option>
               <option value="6">Class 6</option>
+            </select>
+            <label htmlFor="classSelect">{"Language :"}</label>
+            <select
+              id="langSelect"
+              value={activeLanguage}
+              onChange={handleSelectChangeLang}
+            >
+              <option value="0">All</option>
+              <option value="hindi">Hindi</option>
+              <option value="english">English</option>
             </select>
           </div>
         </div>
