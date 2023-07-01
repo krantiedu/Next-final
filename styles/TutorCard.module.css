@@ -1,0 +1,94 @@
+.tutor_card{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    width: 30%;
+    max-width: 300px;
+    min-width: 220px;
+    height: 320px;
+    border-radius: .7rem;
+    padding: 20px;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.tutor_card:hover{
+    background-color: white;
+    box-shadow: 0 0 10px 0 black;
+}
+
+.tutor_card_header{
+    transition: all 1s ease;
+    margin-bottom: 40px;
+}
+
+.tutor_image_wrap{
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 1s ease;
+    opacity: 1;
+    box-shadow: 0 0 10px 0px black;
+    
+}
+
+.tutor_image_wrap img{
+    width: 100%;
+    height: 100%;
+}
+.tutor_name{
+    text-align: center;
+    margin-top: 20px;
+}
+.tutor_name p{
+    font-size: 1rem;
+    color: #622bbb;
+    font-weight: 700;
+}
+.tutor_name span{
+    font-size: .8rem;
+    color: #ff6a00;
+}
+.tutor_info{
+    font-size: .9rem;
+    color: #622bbb;
+}
+
+/* After hover*/
+.tutor_card_header_hover{
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff6a00;
+}
+
+.tutor_image_wrap_hover{
+    box-shadow: 0 0 0 3px #622bbb;
+    margin: auto 0;
+    width: 50px;
+    height: 50px;
+}
+
+.tutor_name_hover{
+    text-align: left;
+    margin: 0 0px 0 10px;
+}
+
+@media (min-width: 768px) and (max-width: 1023px){
+    .tutor_card{
+        padding: 15px;
+    }
+    .tutor_info{
+        font-size: .85rem;
+    }
+}
+
+@media (max-width: 767px){
+    .tutor_card{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+}
