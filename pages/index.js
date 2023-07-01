@@ -9,6 +9,9 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Pop_Courses from "@/component/top_courses";
+import Achivement from "@/component/achivement_sec";
+import School from "@/component/school_partner";
+import GoToTop from "@/partials/gototop";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -99,8 +102,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Top Courses Section */}
       <Pop_Courses />
+      <Achivement />
+      <School />
     </div>
   );
 }
