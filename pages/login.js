@@ -41,7 +41,7 @@ export default function Login() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://kranti-back.onrender.com/login`,
+        `https://krantieducation.onrender.com/login`,
         {
           method: "POST",
           headers: {

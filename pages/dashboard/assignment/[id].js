@@ -124,7 +124,7 @@ export default function Home() {
     const fetchProfile = async () => {
       try {
         const response = await axios.post(
-          `https://kranti-back.onrender.com/sendmodule`,
+          `https://krantieducation.onrender.com/sendmodule`,
           { productid: id }
         );
 

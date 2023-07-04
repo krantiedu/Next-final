@@ -64,7 +64,7 @@ export default function Home() {
           <div className="review_card">
             <div className="review_card_img_wrap">
               <Image
-                src={`https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60`}
+                src={`https://images.unsplash.com/photo-1623303366639-0e330d7c3d9f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80`}
                 alt=""
                 width={500}
                 height={500}
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="review_card">
             <div className="review_card_img_wrap">
               <Image
-                src={`https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60`}
+                src={`https://plus.unsplash.com/premium_photo-1682089892133-556bde898f2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80`}
                 alt=""
                 width={500}
                 height={500}
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="review_card">
             <div className="review_card_img_wrap">
               <Image
-                src={`https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHVzZXIlMjBwcm9maWxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60`}
+                src={`https://images.unsplash.com/photo-1542974460-358a399cae1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80`}
                 alt=""
                 width={500}
                 height={500}
