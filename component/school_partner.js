@@ -15,7 +15,7 @@ const School = () => {
               height={200}
             />
           </div>
-          <p>D.P. School</p>
+          <p>College University</p>
         </div>
         <div className={styles.school_card}>
           <div className={styles.school_logo_wrap}>
@@ -37,7 +37,7 @@ const School = () => {
               height={200}
             />
           </div>
-          <p>D.P. School</p>
+          <p>Elementary School</p>
         </div>
         <div className={styles.school_card}>
           <div className={styles.school_logo_wrap}>
@@ -48,7 +48,7 @@ const School = () => {
               height={200}
             />
           </div>
-          <p>D.P. School</p>
+          <p>University</p>
         </div>
       </div>
     </div>

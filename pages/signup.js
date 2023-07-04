@@ -41,7 +41,7 @@ export default function Signup() {
     setIsLoading(true);
     try {
       const response = await fetch(
-        `https://kranti-back.onrender.com/register`,
+        `https://krantieducation.onrender.com/register`,
         {
           method: "POST",
           headers: {

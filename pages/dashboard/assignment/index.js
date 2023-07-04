@@ -17,7 +17,7 @@ const Assignment = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.post(
-          `https://kranti-back.onrender.com/sendproduct`
+          `https://krantieducation.onrender.com/sendproduct`
         );
         setProducts(response.data);
         setActiveCourses(response.data);

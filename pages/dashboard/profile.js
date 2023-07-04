@@ -20,7 +20,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.post(`https://kranti-back.onrender.com/showprofile`, { token });
+                const response = await axios.post(`https://krantieducation.onrender.com/showprofile`, { token });
                 console.log("res", response);
                 console.log("my calling");
                 setProfile(response.data);
