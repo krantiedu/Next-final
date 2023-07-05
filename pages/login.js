@@ -83,7 +83,7 @@ export default function Login() {
 
         <Formik
           initialValues={initialValues}
-          validationSchema={signInSchema}
+          //validationSchema={signInSchema}
           onSubmit={(values) => {
             submitHandler(values);
           }}
