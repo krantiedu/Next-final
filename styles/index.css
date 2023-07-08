@@ -28,9 +28,10 @@ main {
     background: white;
     height: fit-content;
     width: 100vw;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     box-shadow: inset 0 0 10px 1px white;
 }
+
 .main_section{
     background: hsla(263, 63%, 45%, 0.231);
     background-image: url(https://ouch-cdn2.icons8.com/Zen95l9pXJNP95jl0Ehn190ZTlRUMkPptjxcgJjI3G0/rs:fit:256:338/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMzQ3/L2MxZGFiYmQyLWIy/OWYtNGJhZC1hNDg0/LTIzNTg0OWJhMTZk/OC5wbmc.png);
@@ -44,6 +45,7 @@ main {
     flex-direction: column;
     justify-content: center;
 }
+
 .main_content_wrap{
     background: transparent;
     margin-left: 20%;
